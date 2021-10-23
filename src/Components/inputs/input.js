@@ -21,9 +21,11 @@ class Input extends React.Component {
         this.handleRateChange = this.handleRateChange.bind(this)
         this.handleAddressChange = this.handleAddressChange.bind(this)
         this.handleAvgSqrMeterPriceChange = this.handleAvgSqrMeterPriceChange.bind(this)
-        this.handleAvgSqrMeterPriceChange = this.handleAvgSqrMeterPriceChange.bind(this)
-        this.handleAvgSqrMeterPriceChange = this.handleAvgSqrMeterPriceChange.bind(this)
-        this.handleAvgSqrMeterPriceChange = this.handleAvgSqrMeterPriceChange.bind(this)
+        this.handlehistoryPuchaseChange = this.handlehistoryPuchaseChange.bind(this)
+        this.handlehistoryPuchaseChange = this.handlehistoryPuchaseChange.bind(this)
+        this.handleSbMinValChange = this.handleSbMinValChange.bind(this)
+        this.handleSbMaxValChange = this.handleSbMaxValChange.bind(this)
+        this.handleFNBValChange = this.handleFNBValChange.bind(this)
     }
 
     buildPDF() {
@@ -71,13 +73,24 @@ class Input extends React.Component {
             <div className='container'>
                 <div className ='flex container'>
                     <div className='input'>
-                        <input placeHolder="House, Duplex ..." onChange={this.handleNameChange} type='text'/>
+                        <h2>Basic House Information</h2>
+
+                        <select name="property" id="propertyType" placeholder='Property Type' onChange={this.handleNameChange}>
+                            <option value="house">House</option>
+                            <option value="complex">Complex</option>
+                            <option value="townhouse">Townhouse</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="vacant land / plot">Vacant Land / Plot</option>
+                            <option value="commercial property">Commercial Property</option>
+                            <option value="industrial property">Industrial Property</option>
+                        </select>
                         <input placeHolder="Square Meters" onChange={this.handleSqrMeterChange} type='number'/>
                         <input placeHolder="Average Price per m²" onChange={this.handleAvgSqrMeterPriceChange} type='number'/>
-                        <input placeHolder="Going Rate %" onChange={this.handleRateChange} type='number'/>
+                        <input placeHolder="Growth Rate" onChange={this.handleRateChange} type='number'/>
                         <input placeHolder="Address" onChange={this.handleAddressChange} type='text'/>
                     </div>
                     <div className='input'>   
+                        <h2>Bank Valuation</h2>
                         <input placeHolder="Standard Bank Minimum" onChange={this.handleSbMinValChange} type='number'/>
                         <input placeHolder="Standard Bank Maximun" onChange={this.handleSbMaxValChange} type='number'/>
                         <input placeHolder="First National Bank Valuation" onChange={this.handleFNBValChange} type='number'/>
