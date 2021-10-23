@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import {jsPDF} from 'jspdf'
-import {PDFObject} from 'pdfobject'
 
 import Input from '../inputs/input'
 

@@ -1,6 +1,6 @@
 {
-  "homepage":"https://Gitfunderqwa.github.io/leapfrog",
   "name": "pdf-generator",
+  "homepage": "https://Gitfunderqwa.github.io/leapfrog",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
