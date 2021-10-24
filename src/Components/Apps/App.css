@@ -2,16 +2,16 @@ body,
 html,
 #root {
   height: 100%;
+}
+
+html {
+  font-size: 18px;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./img/housesArial.jpeg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size:  cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-html {
-  font-size: 18px;
 }
 
 h1 {
